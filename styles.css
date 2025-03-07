@@ -132,3 +132,36 @@ footer {
         font-size: 0.9em; /* Reducimos el tamaño de los enlaces del menú */
     }
 }
+/* Estilos para el enlace de descarga */
+.download-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1a2a6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #fdbb2d;
+    color: #1a2a6c;
+}
+/* Estilos para el botón de LinkedIn */
+.linkedin-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b5; /* Color oficial de LinkedIn */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005582; /* Un tono más oscuro para el hover */
+}
