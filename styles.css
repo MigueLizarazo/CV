@@ -80,3 +80,55 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Aumentamos el ancho para aprovechar mejor el espacio */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reducimos el tamaño del título */
+    }
+
+    header p {
+        font-size: 1em; /* Reducimos el tamaño del subtítulo */
+    }
+
+    .profile-img {
+        width: 100px; /* Reducimos el tamaño de la imagen de perfil */
+        height: 100px;
+    }
+
+    nav ul li {
+        display: block; /* Cambiamos a un menú vertical */
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px 0; /* Reducimos el margen entre secciones */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reducimos el tamaño de los títulos de sección */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Ajustamos el título para pantallas muy pequeñas */
+    }
+
+    header p {
+        font-size: 0.9em; /* Ajustamos el subtítulo */
+    }
+
+    .profile-img {
+        width: 80px; /* Hacemos la imagen de perfil aún más pequeña */
+        height: 80px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em; /* Reducimos el tamaño de los enlaces del menú */
+    }
+}
