@@ -71,40 +71,54 @@
     <!-- Script para obtener la ubicación y enviarla al backend -->
     <script>
         // Función para obtener la IP del visitante
-        async function obtenerIP() {
-            try {
-                const response = await fetch('https://api.ipify.org?format=json');
-                const data = await response.json();
-                return data.ip;
-            } catch (error) {
-                console.error("Error al obtener la IP:", error);
-                return null;
-            }
-        }
+	async function obtenerIP() {
+	  try {
+	    console.log("Obteniendo la IP...");
+	    const response = await fetch('https://api.ipify.org?format=json');
+	    if (!response.ok) {
+	      throw new Error(`Error al obtener la IP: ${response.statusText}`);
+	    }
+	    const data = await response.json();
+	    console.log("IP obtenida:", data.ip);
+	    return data.ip;
+	  } catch (error) {
+	    console.error("Error al obtener la IP:", error);
+	    return null;
+	  }
+	}       
 
         // Función para enviar los datos al backend de Google Apps Script
-        async function enviarDatosAlBackend(ip) {
-            try {
-                const url = 'https://script.googleapis.com/v1/scripts/AKfycbzB1ud7z23-E3FaWLOkOHSwMEFi5MYT23t54GRTzPL-fC4E6n8hREb6Z3MNhPV3UcOq:run'; // Reemplaza con la URL de tu script
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ ip: ip })
-                });
-                const data = await response.text();
-                console.log("Respuesta del backend:", data);
-            } catch (error) {
-                console.error("Error al enviar datos al backend:", error);
-            }
-        }
-
+	async function enviarDatosAlBackend(ip) {
+	  try {
+	    console.log("Enviando datos al backend...");
+	    const url = 'https://script.googleapis.com/v1/scripts/AKfycbzB1ud7z23-E3FaWLOkOHSwMEFi5MYT23t54GRTzPL-fC4E6n8hREb6Z3MNhPV3UcOq:run'; // Reemplaza con la URL de tu script
+	    const response = await fetch(url, {
+	      method: 'POST',
+	      headers: { 'Content-Type': 'application/json' },
+	      body: JSON.stringify({ ip: ip })
+	    });
+	    if (!response.ok) {
+	      throw new Error(`Error al enviar datos al backend: ${response.statusText}`);
+	    }
+	    const data = await response.text();
+	    console.log("Respuesta del backend:", data);
+	  } catch (error) {
+	    console.error("Error al enviar datos al backend:", error);
+	  }
+	}
+		    
+       
         // Función principal
-        async function main() {
-            const ip = await obtenerIP();
-            if (ip) {
-                await enviarDatosAlBackend(ip);
-            }
-        }
+       async function main() {
+	  try {
+	    const ip = await obtenerIP();
+	    if (ip) {
+	      await enviarDatosAlBackend(ip);
+	    }
+	  } catch (error) {
+	    console.error("Error en la función principal:", error);
+	  }
+	}
 
         // Ejecutar la función principal
         main();
