@@ -70,6 +70,7 @@
     <!-- Script para obtener la ubicación y enviarla al backend -->
     <script>
         // Función para obtener la IP del visitante
+        console.log("entrro al Script");
         async function obtenerIP() {
             try {
                 console.log("Obteniendo la IP...");
@@ -90,7 +91,7 @@
         async function enviarDatosAlBackend(ip) {
             try {
                 console.log("Enviando datos al backend...");
-                const url = https://script.googleapis.com/v1/scripts/AKfycbyyU17lF19_zr-zasXJk2TzKiM6HUEqQFFeMqeiKgPS53IM_OD43JHWUD2mEgN6cBm3:run'; // Reemplaza con la URL de tu script
+                const url = 'https://script.googleapis.com/v1/scripts/AKfycbyyU17lF19_zr-zasXJk2TzKiM6HUEqQFFeMqeiKgPS53IM_OD43JHWUD2mEgN6cBm3:run';
                 const response = await fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
