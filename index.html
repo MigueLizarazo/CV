@@ -91,8 +91,9 @@
 	async function enviarDatosAlBackend(ip) {
 	  try {
 	    console.log("Enviando datos al backend...");
-	    const url = 'https://script.googleapis.com/v1/scripts/AKfycbzB1ud7z23-E3FaWLOkOHSwMEFi5MYT23t54GRTzPL-fC4E6n8hREb6Z3MNhPV3UcOq:run'; // Reemplaza con la URL de tu script
-	    const response = await fetch(url, {
+	    const url = 'https://script.googleapis.com/v1/scripts/AKfycbyyU17lF19_zr-zasXJk2TzKiM6HUEqQFFeMqeiKgPS53IM_OD43JHWUD2mEgN6cBm3:run'; // Reemplaza con la URL de tu script
+	    
+		  const response = await fetch(url, {
 	      method: 'POST',
 	      headers: { 'Content-Type': 'application/json' },
 	      body: JSON.stringify({ ip: ip })
