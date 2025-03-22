@@ -83,8 +83,10 @@ footer {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    
     .container {
-        width: 95%; /* Aumentamos el ancho para aprovechar mejor el espacio */
+        width: 92%;
+        padding-right: 5%;
     }
 
     header h1 {
@@ -115,6 +117,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: 92%;
+        padding-right: 5%;
+    }
     header h1 {
         font-size: 1.5em; /* Ajustamos el título para pantallas muy pequeñas */
     }
