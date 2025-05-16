@@ -318,3 +318,50 @@ footer {
     font-size: 0.9em;
   }
 }
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto 20px;
+  max-width: 400px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Estilo base de los botones */
+.btn-nav {
+  flex: 1 1 45%;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para desktop */
+.btn-nav:hover {
+  background-color: #005f91;
+}
+
+/* RESPONSIVE para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .btn-nav {
+    flex: 1 1 100%;
+    font-size: 0.95em;
+    padding: 12px 20px;
+  }
+}
+
