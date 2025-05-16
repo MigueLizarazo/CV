@@ -13,6 +13,10 @@ body {
     padding: 20px;
 }
 
+container p {
+    font-size: 1.0em;
+}
+
 header {
     background: linear-gradient(to right, #f4f4f9, #adb9be, #8497a0);
     color: black;
@@ -68,9 +72,11 @@ section {
 }
 
 h2 {
-    color: #1a2a6c;
-    border-bottom: 2px solid #fdbb2d;
+    color: #162358;
+    border-bottom: 2px solid #8a8b8b;
     padding-bottom: 10px;
+    font-size: 1.3em;
+    text-align: center;
 }
 
 footer {
@@ -112,7 +118,7 @@ footer {
     }
 
     h2 {
-        font-size: 1.5em; /* Reducimos el tamaño de los títulos de sección */
+        font-size: 1.3em; /* Reducimos el tamaño de los títulos de sección */
     }
 }
 
@@ -170,4 +176,138 @@ footer {
 
 .linkedin-button:hover {
     background-color: #005582; /* Un tono más oscuro para el hover */
+}
+
+
+
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card i {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.feature-card h2 i {
+    font-size: inherit;  /* Hereda el tamaño del h2 */
+    color: inherit;      /* Hereda el color del h2 */
+    margin-right: 8px;   /* Espacio entre el icono y el texto */
+    vertical-align: top;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+
+.feature-card h5 {
+  margin: 8px 0;
+  font-weight: normal;
+  color: #555;
+}
+
+.feature-card p {
+  color:  #5d5e5f;
+  text-align: left;
+  font-size: 0.9rem;
+  
+}
+
+.profile-card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b1b3b4;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #010866;
+}
+
+.profile-card h4 {
+  margin: 8px 0;
+  font-weight: normal;
+  color: #555;
+}
+
+.profile-card p {
+  font-size: 0.95em;
+  text-align: justify;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+  .profile-card {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-card h2 {
+    font-size: 1.4em;
+  }
+
+  .profile-card p {
+    font-size: 0.9em;
+  }
 }
