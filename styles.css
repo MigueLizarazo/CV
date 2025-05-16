@@ -332,14 +332,14 @@ footer {
 /* Estilo base de los botones */
 .btn-nav {
   flex: 1 1 45%;
-  background-color: #0077b6;
+  background-color: #1788f8;
   color: #fff;
   padding: 10px 15px;
   border-radius: 30px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.9em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -360,7 +360,7 @@ footer {
 
   .btn-nav {
     flex: 1 1 100%;
-    font-size: 0.95em;
+    font-size: 0.9em;
     padding: 12px 20px;
   }
 }
