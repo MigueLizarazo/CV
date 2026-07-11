@@ -294,6 +294,61 @@ footer {
     background-color: #168f41;
 }
 
+/* =====================================================
+   Tarjetas de prensa escrita
+   ===================================================== */
+
+.press-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25, 35, 50, 0.96),
+            rgba(55, 70, 90, 0.92)
+        );
+}
+
+.press-header:hover {
+    color: #fff;
+}
+
+.press-icon {
+    font-size: 4.5rem;
+    transition: transform 0.2s ease;
+}
+
+.press-header:hover .press-icon {
+    transform: scale(1.08);
+}
+
+.press-label {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 4px;
+}
+
+.media-button.press-button {
+    background-color: #34495e;
+}
+
+.media-button.press-button:hover {
+    background-color: #22313f;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     
