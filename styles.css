@@ -272,6 +272,28 @@ footer {
     opacity: 0.85;
 }
 
+/* Reproductor de Spotify */
+
+.spotify-container {
+    width: 100%;
+    background-color: #121212;
+}
+
+.spotify-container iframe {
+    display: block;
+    width: 100%;
+    height: 232px;
+    border: 0;
+}
+
+.media-button.spotify-button {
+    background-color: #1db954;
+}
+
+.media-button.spotify-button:hover {
+    background-color: #168f41;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     
