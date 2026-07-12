@@ -349,6 +349,106 @@ footer {
     background-color: #22313f;
 }
 
+/* =====================================================
+   Habilidades profesionales
+   ===================================================== */
+
+.skills-card {
+    width: 100%;
+}
+
+.skills-main-title {
+    margin-top: 38px;
+    margin-bottom: 18px;
+    padding-bottom: 9px;
+    color: #2c3e50;
+    border-bottom: 2px solid #dfe5eb;
+}
+
+.skills-main-title:first-child {
+    margin-top: 0;
+}
+
+.skills-main-title i {
+    margin-right: 8px;
+    color: #4d6278;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.skill-item {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.skill-header strong {
+    color: #2f3b4b;
+    font-size: 1rem;
+}
+
+.skill-item p {
+    margin: 0;
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.skill-level {
+    flex-shrink: 0;
+    padding: 4px 9px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.skill-level.advanced {
+    color: #155724;
+    background-color: #d4edda;
+}
+
+.skill-level.intermediate {
+    color: #856404;
+    background-color: #fff3cd;
+}
+
+.skill-level.basic {
+    color: #383d41;
+    background-color: #e2e3e5;
+}
+
+@media (max-width: 750px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-header {
+        align-items: flex-start;
+    }
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     
