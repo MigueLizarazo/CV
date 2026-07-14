@@ -1,6 +1,22 @@
-/* Estilos generales */
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
 body {
-    font-family: 'Arial', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -9,13 +25,31 @@ body {
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-container p {
-    font-size: 1.0em;
+.container p {
+    font-size: 1em;
 }
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #162358;
+    border-bottom: 2px solid #8a8b8b;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
 
 header {
     background: linear-gradient(to right, #f4f4f9, #adb9be, #8497a0);
@@ -38,7 +72,13 @@ header p {
     height: 250px;
     border-radius: 50%;
     border: 3px solid white;
+    object-fit: cover;
 }
+
+
+/* =====================================================
+   NAVEGACIÓN PRINCIPAL
+   ===================================================== */
 
 nav {
     background-color: #333;
@@ -67,28 +107,206 @@ nav ul li a:hover {
     color: #fdbb2d;
 }
 
-section {
-    margin: 20px 0;
-}
-
-h2 {
-    color: #162358;
-    border-bottom: 2px solid #8a8b8b;
-    padding-bottom: 10px;
-    font-size: 1.3em;
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
 
 /* =====================================================
-   Divulgación científica y apariciones en medios
+   TARJETAS GENERALES
+   ===================================================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.feature-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.feature-card h2 i {
+    font-size: inherit;
+    color: inherit;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.feature-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: black;
+    text-align: left;
+}
+
+.feature-card h5 {
+    margin: 8px 0;
+    font-weight: normal;
+    color: #555;
+}
+
+.feature-card p {
+    color: #5d5e5f;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   TARJETA DE PERFIL
+   ===================================================== */
+
+.profile-card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b1b3b4;
+    margin-bottom: 15px;
+}
+
+.profile-card h2 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #010866;
+}
+
+.profile-card h4 {
+    margin: 8px 0;
+    font-weight: normal;
+    color: #555;
+}
+
+.profile-card p {
+    font-size: 0.95em;
+    text-align: justify;
+    line-height: 1.5;
+    color: #444;
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   BOTONES GENERALES
+   ===================================================== */
+
+.download-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1a2a6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #fdbb2d;
+    color: #1a2a6c;
+}
+
+.linkedin-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+
+/* =====================================================
+   BOTONES DE NAVEGACIÓN ENTRE PÁGINAS
+   ===================================================== */
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto 20px;
+    max-width: 400px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-nav {
+    flex: 1 1 45%;
+    background-color: #1788f8;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #005f91;
+}
+
+
+/* =====================================================
+   DIVULGACIÓN CIENTÍFICA Y APARICIONES EN MEDIOS
    ===================================================== */
 
 .media-section {
@@ -116,16 +334,19 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .media-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     overflow: hidden;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .media-card:hover {
@@ -149,6 +370,10 @@ footer {
 }
 
 .media-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
     padding: 22px;
 }
 
@@ -187,7 +412,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 18px;
+    margin-top: auto;
+    padding-top: 18px;
 }
 
 .media-button {
@@ -199,12 +425,11 @@ footer {
     text-decoration: none;
     background-color: #c4302b;
     border-radius: 5px;
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .media-button:hover {
+    color: #fff;
     background-color: #9f2723;
     transform: translateY(-1px);
 }
@@ -217,21 +442,10 @@ footer {
     background-color: #333;
 }
 
-@media (max-width: 600px) {
-    .media-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .media-links {
-        flex-direction: column;
-    }
-
-    .media-button {
-        justify-content: center;
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
+/* =====================================================
+   MINIATURAS DE VIDEO
+   ===================================================== */
 
 .video-thumbnail-link {
     display: block;
@@ -246,10 +460,16 @@ footer {
 }
 
 .video-thumbnail img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.video-thumbnail-link:hover img {
+    opacity: 0.82;
+    transform: scale(1.02);
 }
 
 .play-button {
@@ -268,11 +488,10 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-.video-thumbnail:hover img {
-    opacity: 0.85;
-}
 
-/* Reproductor de Spotify */
+/* =====================================================
+   REPRODUCTOR DE SPOTIFY
+   ===================================================== */
 
 .spotify-container {
     width: 100%;
@@ -294,8 +513,9 @@ footer {
     background-color: #168f41;
 }
 
+
 /* =====================================================
-   Tarjetas de prensa escrita
+   TARJETAS DE PRENSA ESCRITA
    ===================================================== */
 
 .press-header {
@@ -307,12 +527,11 @@ footer {
     overflow: hidden;
     color: #fff;
     text-decoration: none;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(25, 35, 50, 0.96),
-            rgba(55, 70, 90, 0.92)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(25, 35, 50, 0.96),
+        rgba(55, 70, 90, 0.92)
+    );
 }
 
 .press-header:hover {
@@ -349,12 +568,30 @@ footer {
     background-color: #22313f;
 }
 
+.archive-note {
+    margin-top: 14px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #666;
+    background-color: #f4f5f6;
+    border-left: 3px solid #7f8c8d;
+    border-radius: 3px;
+}
+
+.archive-note i {
+    margin-right: 6px;
+}
+
+
 /* =====================================================
-   Habilidades profesionales
+   HABILIDADES PROFESIONALES
    ===================================================== */
 
 .skills-card {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .skills-main-title {
@@ -363,6 +600,7 @@ footer {
     padding-bottom: 9px;
     color: #2c3e50;
     border-bottom: 2px solid #dfe5eb;
+    overflow-wrap: anywhere;
 }
 
 .skills-main-title:first-child {
@@ -378,16 +616,19 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .skill-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 16px;
     background-color: #f8f9fa;
     border: 1px solid #e2e6ea;
     border-radius: 8px;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill-item:hover {
@@ -400,12 +641,16 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    width: 100%;
+    min-width: 0;
     margin-bottom: 8px;
 }
 
 .skill-header strong {
+    min-width: 0;
     color: #2f3b4b;
     font-size: 1rem;
+    overflow-wrap: anywhere;
 }
 
 .skill-item p {
@@ -413,6 +658,7 @@ footer {
     color: #555;
     font-size: 0.92rem;
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .skill-level {
@@ -421,6 +667,7 @@ footer {
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
+    white-space: nowrap;
     border-radius: 20px;
 }
 
@@ -439,9 +686,82 @@ footer {
     background-color: #e2e3e5;
 }
 
-@media (max-width: 750px) {
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   DISEÑO RESPONSIVO: TABLETAS Y CELULARES
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        width: 300px;
+        max-width: calc(100vw - 40px);
+        height: 300px;
+        max-height: calc(100vw - 40px);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .features {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .media-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .skill-header {
@@ -449,281 +769,108 @@ footer {
     }
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    
-    .container {
-        width: 92%;
-        padding-right: 5%;
+
+/* =====================================================
+   DISEÑO RESPONSIVO: CELULARES PEQUEÑOS
+   ===================================================== */
+
+@media screen and (max-width: 600px) {
+    .media-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    header h1 {
-        font-size: 2em; /* Reducimos el tamaño del título */
+    .media-links {
+        flex-direction: column;
     }
 
-    header p {
-        font-size: 1em; /* Reducimos el tamaño del subtítulo */
-    }
-
-    .profile-img {
-        width: 300px; /* Reducimos el tamaño de la imagen de perfil */
-        height: 300px;
-    }
-
-    nav ul li {
-        display: block; /* Cambiamos a un menú vertical */
-        margin: 10px 0;
-    }
-
-    section {
-        margin: 10px 0; /* Reducimos el margen entre secciones */
-    }
-
-    h2 {
-        font-size: 1.3em; /* Reducimos el tamaño de los títulos de sección */
+    .media-button {
+        justify-content: center;
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container {
-        width: 92%;
-        padding-right: 5%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 12px;
     }
+
     header h1 {
-        font-size: 1.5em; /* Ajustamos el título para pantallas muy pequeñas */
+        font-size: 1.5em;
     }
 
     header p {
-        font-size: 0.9em; /* Ajustamos el subtítulo */
+        font-size: 0.9em;
     }
 
     .profile-img {
-        width: 200px; /* Hacemos la imagen de perfil aún más pequeña */
+        width: 200px;
         height: 200px;
     }
 
     nav ul li a {
-        font-size: 0.9em; /* Reducimos el tamaño de los enlaces del menú */
+        font-size: 0.9em;
+    }
+
+    .profile-card {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-card h2 {
+        font-size: 1.4em;
+    }
+
+    .profile-card p {
+        font-size: 0.9em;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .btn-nav {
+        flex: 1 1 100%;
+        width: 100%;
+        font-size: 0.9em;
+        padding: 12px 20px;
+    }
+
+    .features {
+        padding: 8px 0;
+    }
+
+    .feature-card,
+    .skills-card {
+        padding: 14px;
+    }
+
+    .skill-item {
+        padding: 14px;
+    }
+
+    .skill-header {
+        gap: 8px;
+    }
+
+    .skill-level {
+        padding: 4px 8px;
+        font-size: 0.68rem;
+    }
+
+    .skills-main-title {
+        font-size: 1.35rem;
+        line-height: 1.35;
     }
 }
-/* Estilos para el enlace de descarga */
-.download-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #1a2a6c;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.download-link:hover {
-    background-color: #fdbb2d;
-    color: #1a2a6c;
-}
-/* Estilos para el botón de LinkedIn */
-.linkedin-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0077b5; /* Color oficial de LinkedIn */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.linkedin-button:hover {
-    background-color: #005582; /* Un tono más oscuro para el hover */
-}
-
-
-
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  
-  margin: 0 auto;
-  padding: 20px;
-  
-}
-
-
-
-.feature-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-}
-
-.feature-card i {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-}
-
-.feature-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--dark);
-}
-
-.feature-card h2 i {
-    font-size: inherit;  /* Hereda el tamaño del h2 */
-    color: inherit;      /* Hereda el color del h2 */
-    margin-right: 8px;   /* Espacio entre el icono y el texto */
-    vertical-align: top;
-}
-
-.feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--dark);
-}
-
-.feature-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: black;
-  text-align: left;
-}
-
-
-.feature-card h5 {
-  margin: 8px 0;
-  font-weight: normal;
-  color: #555;
-}
-
-.feature-card p {
-  color:  #5d5e5f;
-  text-align: left;
-  font-size: 0.9rem;
-  
-}
-
-.profile-card {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: center;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  transition: transform 0.3s ease;
-}
-
-.profile-card:hover {
-  transform: translateY(-5px);
-}
-
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #b1b3b4;
-  margin-bottom: 15px;
-}
-
-.profile-card h2 {
-  margin: 0;
-  font-size: 1.6em;
-  color: #010866;
-}
-
-.profile-card h4 {
-  margin: 8px 0;
-  font-weight: normal;
-  color: #555;
-}
-
-.profile-card p {
-  font-size: 0.95em;
-  text-align: justify;
-  line-height: 1.5;
-  color: #444;
-  margin-top: 10px;
-}
-
-/* Responsive design */
-@media screen and (max-width: 480px) {
-  .profile-card {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .profile-card h2 {
-    font-size: 1.4em;
-  }
-
-  .profile-card p {
-    font-size: 0.9em;
-  }
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px auto 20px;
-  max-width: 400px;
-  padding: 0 10px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Estilo base de los botones */
-.btn-nav {
-  flex: 1 1 45%;
-  background-color: #1788f8;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 30px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-/* Hover para desktop */
-.btn-nav:hover {
-  background-color: #005f91;
-}
-
-/* RESPONSIVE para pantallas pequeñas */
-@media screen and (max-width: 480px) {
-  .nav-buttons {
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .btn-nav {
-    flex: 1 1 100%;
-    font-size: 0.9em;
-    padding: 12px 20px;
-  }
-}
-
